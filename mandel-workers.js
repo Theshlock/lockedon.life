@@ -835,11 +835,12 @@ startTime = Date.now();
 
 // drawing menu buttons
 const playButton = document.createElement('button');
-playButton.style = 'button';
+playButton.className = 'button';
 playButton.textContent = 'Play!';
 playButton.addEventListener('click', () => {playButton.style.display = "none";privacyPolicyButton.style.display = "none";status = "playing";});
 
 const privacyPolicyButton = document.createElement('button');
+privacyPolicyButton.className = 'button';
 privacyPolicyButton.textContent = 'Privacy Policy';
 privacyPolicyButton.addEventListener('click',()=>{location.href = "https://lockedon.life/privacy";});
 
