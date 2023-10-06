@@ -877,8 +877,8 @@ function gameloop() {
 		yRate += ( down - up + ( -my / 1000) ) / 10 * ( Date.now() - time ) / 10;
 		xnorm += ( xRate / zoom ) * ( Date.now() - time)  / 10;
 		ynorm += ( yRate / zoom ) * ( Date.now() - time ) / 10;
-		speed += ( (up || down || left || right || touchEvent) - 0.5) * ( Date.now() - time ) / 400;
-		zoom += Math.ceil( zoom / 20000 ) * speed * ( Date.now() - time ) + speed;
+		speed += 1;
+		zoom +=  speed;
 		//reset if zoomed all the way out
 		if (zoom < 100) {zoom = 100; speed = 0.1; xnorm = 0; ynorm = 0; xRate = 0; yRate = 0};
 		time = Date.now();
