@@ -9,7 +9,7 @@
 var mousePressed = 0;
 var iterations = 1000;
 var maxBlockSize = 8;
-var zoom = 1;
+var zoom = 100;
 const canvasWidth = 800*2;
 const canvasHeight = 600*2;
 const scaleFactor = 2;
@@ -19,7 +19,7 @@ const coarseHeight = canvasHeight/scaleFactor;
 
 var screenX = canvasWidth/2+400;
 var screenY = canvasHeight/2;
-var xnorm = 0.0;
+var xnorm = 2.0;
 var ynorm = 0.0;
 
 var blockSize = new Uint8Array(16);
