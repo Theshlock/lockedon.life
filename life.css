@@ -10,7 +10,7 @@ img {
 #container {
   position: relative;
 }
-#container canvas, #overlay {
+#container canvas, #overlay, #overlay2 {
   position: absolute;
 }
 div {
