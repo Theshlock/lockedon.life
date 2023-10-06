@@ -847,10 +847,11 @@ privacyPolicyButton.addEventListener('click',()=>{location.href = "https://locke
 document.getElementById("overlay2").appendChild(playButton);
 document.getElementById("overlay2").appendChild(privacyPolicyButton);
 
+startRender(1,1);
+
 function gameloop() {
 	if (status == "main menu") {
 		speed = 1;
-		startRender(1,1);
 		window.requestAnimationFrame(gameloop);
 	} else if (status == "playing") {
 		if (Date.now() - startTime < 3000) {contextM.fillText("Seek the Portal", 300, 250)};
