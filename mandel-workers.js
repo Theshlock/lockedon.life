@@ -852,7 +852,7 @@ startRender(1,1);
 function gameloop() {
 	if (status == "main menu") {
                zoom += Math.ceil( zoom / 20000 ) * speed * ( Date.now() - time ) + speed;
-		speed = 0.11;
+		speed = 0.01;
 startRender(1,1);
 		window.requestAnimationFrame(gameloop);
 	} else if (status == "playing") {
