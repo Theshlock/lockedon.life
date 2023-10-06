@@ -22,7 +22,6 @@ div {
   height: 100%;
 }
 .button {
-  z-index: auto;
   background-color: #999;
   margin: auto;
   position: relative;
