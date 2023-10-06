@@ -851,8 +851,8 @@ startRender(1,1);
 
 function gameloop() {
 	if (status == "main menu") {
-		//xnorm = -2;
-		//ynorm = 0;
+		xnorm = -2;
+		ynorm = 0;
 		zoom += speed;
 		speed = 0.01;
 		startRender(1,1);
