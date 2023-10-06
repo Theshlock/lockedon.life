@@ -1,0 +1,26 @@
+Change ordering of colours such that it starts dark then goes bright then goes dark to mimic day night cycle
+
+Pause button
+
+
+
+Gameplay
+- Same starting coordinate each time
+- Point changes
+- ZoomSpeed is fixed
+
+Phone UI
+- Dpad
+
+Zen mode
+	Remove momentum
+PC
+    - Explanation
+        - Shift to zoom in, space to zoom out
+Mobile
+	Zoom in button
+	Zoom out button
+
+Menu
+    - Goto point
+    - Change Zoom rate
