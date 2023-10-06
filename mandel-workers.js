@@ -855,7 +855,7 @@ function gameloop() {
 		//ynorm = 0;
 		zoom += speed;
 		speed = 0.01;
-		//startRender(1,1);
+		startRender(1,1);
 		window.requestAnimationFrame(gameloop);
 	} else if (status == "playing") {
 		if (Date.now() - startTime < 3000) {contextM.fillText("Seek the Portal", 300, 250)};
