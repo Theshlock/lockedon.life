@@ -842,10 +842,9 @@ const privacyPolicyButton = document.createElement('button');
 privacyPolicyButton.textContent = 'Privacy Policy';
 privacyPolicyButton.addEventListener('click',()=>{location.href = "https://lockedon.life/privacy";});
 
-document.getElementById("div").appendChild(playButton);
-document.getElementById("div").appendChild(privacyPolicyButton);
+document.getElementById("container").appendChild(playButton);
+document.getElementById("container").appendChild(privacyPolicyButton);
 
-document.body.appendChild(menuDiv);
 //
 
 function gameloop() {
