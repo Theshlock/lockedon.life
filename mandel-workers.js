@@ -852,7 +852,8 @@ startRender(1,1);
 function gameloop() {
 	if (status == "main menu") {
                zoom += Math.ceil( zoom / 20000 ) * speed * ( Date.now() - time ) + speed;
-		speed = 1;
+		speed = 0.11;
+startRender(1,1);
 		window.requestAnimationFrame(gameloop);
 	} else if (status == "playing") {
 		if (Date.now() - startTime < 3000) {contextM.fillText("Seek the Portal", 300, 250)};
