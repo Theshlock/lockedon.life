@@ -844,7 +844,6 @@ privacyPolicyButton.addEventListener('click',()=>{location.href = "https://locke
 
 document.getElementById("container").appendChild(playButton);
 document.getElementById("container").appendChild(privacyPolicyButton);
-
 //
 
 function gameloop() {
