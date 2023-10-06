@@ -837,7 +837,7 @@ startTime = Date.now();
 const playButton = document.createElement('button');
 playButton.className = 'button';
 playButton.textContent = 'Play!';
-playButton.addEventListener('click', () => {playButton.style.display = "none";privacyPolicyButton.style.display = "none";status = "playing";});
+playButton.addEventListener('click', () => {document.getElementById("overlay").style.display = "none";status = "playing";});
 
 const privacyPolicyButton = document.createElement('button');
 privacyPolicyButton.className = 'button';
