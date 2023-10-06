@@ -851,8 +851,8 @@ startRender(1,1);
 
 function gameloop() {
 	if (status == "main menu") {
-		screenX = -2;
-		screenY = 0;
+		screenX = 0;
+		screenY = -2;
 		zoom += Math.ceil( zoom / 20000 ) * speed * ( Date.now() - time ) + speed;
 		speed = 0.01;
 		startRender(1,1);
