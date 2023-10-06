@@ -1,0 +1,41 @@
+body {
+  background: yellow;    
+}
+img {
+  height: 200px;
+  width: 900px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  background-color: #999;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 32px;
+  width: 50%;
+}
+.btn-group {
+  margin-top: 80px;
+}
+img.vert-move {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
