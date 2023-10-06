@@ -16,7 +16,8 @@ img {
 div {
   position: absolute;
     flex-direction: column;
-    justify-content: space-between;}
+    justify-content: space-between;
+}
 .button {
   background-color: #999;
   margin: auto;
