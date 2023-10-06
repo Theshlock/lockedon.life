@@ -832,10 +832,30 @@ contextM.font = "24px Arial";
 var score = 0;
 var status = "main menu"
 startTime = Date.now();
+
+// drawing menu buttons
+const menuDiv = document.createElement("div");
+menuDiv.class = 'menu div';
+
+const playButton = document.createElement('button');
+playButton.className = 'button'
+playButton.textContent = 'Play!';
+playButton.addEventListener('click', () => {playButton.style.display = "none";privacyPolicyButton.style.display = "none";status = "playing";});
+
+const privacyPolicyButton = document.createElement('button');
+privacyPolicyButton.className = 'button'
+privacyPolicyButton.textContent = 'Privacy Policy';
+privacyPolicyButton.addEventListener('click',()=>{location.href = "https://lockedon.life/privacy";});
+
+menuDiv.appendChild(playButton);
+menuDiv.appendChild(privacyPolicyButton);
+
+document.body.appendChild(menuDiv);
+//
+
 function gameloop() {
 	if (status == "main menu") {
 		// if (mousePressed) { status = "playing" };
-		status = "playing";
 		window.requestAnimationFrame(gameloop);
 	} else if (status == "playing") {
 		if (Date.now() - startTime < 3000) {contextM.fillText("Seek the Portal", 300, 250)};
