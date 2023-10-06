@@ -835,7 +835,7 @@ startTime = Date.now();
 
 // drawing menu buttons
 const playButton = document.createElement('button');
-playButton.class = 'button';
+playButton.style = 'button';
 playButton.textContent = 'Play!';
 playButton.addEventListener('click', () => {playButton.style.display = "none";privacyPolicyButton.style.display = "none";status = "playing";});
 
