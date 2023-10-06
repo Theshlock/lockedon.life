@@ -853,7 +853,7 @@ function gameloop() {
 	if (status == "main menu") {
 		xnorm = -2;
 		ynorm = 0;
-		zoom += Math.ceil( zoom / 20000 ) * speed * ( Date.now() - time ) + speed;
+		zoom += speed;
 		speed = 0.01;
 		startRender(1,1);
 		window.requestAnimationFrame(gameloop);
