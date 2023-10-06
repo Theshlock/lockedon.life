@@ -833,7 +833,7 @@ var score = 0;
 var status = "main menu"
 startTime = Date.now();
 
-// drawing menu buttons
+// menu overlay
 const playButton = document.createElement('button');
 playButton.className = 'button';
 playButton.textContent = 'Play!';
@@ -846,11 +846,10 @@ privacyPolicyButton.addEventListener('click',()=>{location.href = "https://locke
 
 document.getElementById("overlay2").appendChild(playButton);
 document.getElementById("overlay2").appendChild(privacyPolicyButton);
-//
 
 function gameloop() {
 	if (status == "main menu") {
-		// if (mousePressed) { status = "playing" };
+		speed = 1;
 		window.requestAnimationFrame(gameloop);
 	} else if (status == "playing") {
 		if (Date.now() - startTime < 3000) {contextM.fillText("Seek the Portal", 300, 250)};
