@@ -850,6 +850,7 @@ document.getElementById("overlay2").appendChild(privacyPolicyButton);
 startRender(1,1);
 
 function gameloop() {
+	
 	if (status == "main menu") {
 		xnorm = -2;
 		ynorm = 0;
@@ -857,7 +858,9 @@ function gameloop() {
 		speed = 0.01;
 		startRender(1,1);
 		window.requestAnimationFrame(gameloop);
-	} else if (status == "playing") {
+		screenX = Math.round(-xnorm * zoom + canvasWidth/2);
+		screenY = Math.round(-ynorm * zoom + canvasHeight/2);
+} else if (status == "playing") {
 		if (Date.now() - startTime < 3000) {contextM.fillText("Seek the Portal", 300, 250)};
 		if (Date.now() - startTime < 3000) {contextM.fillText("Reach the 10th Dimension to Win!", 200, 350)};
 		contextM.fillRect( (((portalX-xnorm) * zoom + 800) / 2) - (20 + zoom/portalDepth*1000) / 2, (((portalY-ynorm) * zoom + 600) / 2) - (20 + zoom/portalDepth*1000) / 2, 20 + zoom/portalDepth*1000, 20 + zoom/portalDepth*1000 );
