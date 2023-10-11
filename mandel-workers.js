@@ -881,8 +881,7 @@ function gameloop() {
 		ynorm += ( yRate / zoom ) * ( Date.now() - time ) / 10;
 
 		//compute distance of position to portal
-		console.log("x:", xnorm-portalX);
-		console.log("y:", ynorm-portalY);
+		console.log("x:", (xnorm-portalX) * zoom);
 		zoom *= 1 + 0.01*multiplier;
 //		zoom = zoom / Math.abs(xnorm-portalX);
 
