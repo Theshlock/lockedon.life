@@ -19,8 +19,6 @@ const coarseHeight = canvasHeight/scaleFactor;
 
 var screenX = canvasWidth/2;
 var screenY = canvasHeight/2;
-var xnorm = 2.0;
-var ynorm = 0.0;
 
 var blockSize = new Uint8Array(16);
 blockSize[0] = 16;
