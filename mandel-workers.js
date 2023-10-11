@@ -875,7 +875,7 @@ function gameloop() {
 		contextM.fillText("X: " + xnorm, 50, 540);
 		contextM.fillText("Y: " + ynorm, 50, 570);
 		contextM.fillText("Z: " + zoom, 50, 600);
-		//adjust xnorm, ynorm and zoom based on parameters
+
 		xRate += ( right - left + ( -mx / 1000) ) / 10 * ( Date.now() - time ) / 10;
 		yRate += ( down - up + ( -my / 1000) ) / 10 * ( Date.now() - time ) / 10;
 		xnorm += ( xRate / zoom ) * ( Date.now() - time)  / 10;
