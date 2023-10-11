@@ -117,10 +117,6 @@ for( i=0; i < workers; i++ ) {
 	smoothMandel[i] = new Uint8Array( canvasWidth * (canvasHeight/workers) );
 }
 
-var zoomSlider;
-var oldMouseX = -1;
-var oldMouseX = -1;
-
 var worker = 0;
 
 mc.addEventListener( "touchstart", touchStart, false );
