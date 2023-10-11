@@ -895,7 +895,7 @@ function gameloop() {
 	        if( zoom > portalDepth ) {
 			if ( -800 < (((portalX-xnorm) * zoom + 800) / 2) && (((portalX-xnorm) * zoom + 800) / 2) < 800 && -1200 < (((portalY-ynorm) * zoom + 600) / 2) && (((portalX-xnorm) * zoom + 800) / 2) < 1200) {
 				console.log("passed");
-				zoom = 1;
+				zoom = 10;
 				dimension++;
 				portalX = xy[2*dimension];
 				portalY = xy[2*dimension + 1];
