@@ -849,13 +849,13 @@ document.getElementById("overlay2").appendChild(privacyPolicyButton);
 
 startRender(1,1);
 
+multiplier = 1;
 function gameloop() {
 
 	if (status == "main menu") {
 		xnorm = -1.76877851023801;
 		ynorm = -0.00173889944794;
-		zoom *= 1 + speed;
-		speed = 0.01;
+		zoom *= 1.01;
 		startRender(1,1);
 		window.requestAnimationFrame(gameloop);
 		screenX = Math.round(-xnorm * zoom + canvasWidth/2);
@@ -880,7 +880,7 @@ function gameloop() {
 		yRate += ( down - up + ( -my / 1000) ) / 10 * ( Date.now() - time ) / 10;
 		xnorm += ( xRate / zoom ) * ( Date.now() - time)  / 10;
 		ynorm += ( yRate / zoom ) * ( Date.now() - time ) / 10;
-		zoom *= 1 + speed;
+		zoom *= 1 + 0.01*multiplier;
 
 		//speed += 0;
 		//zoom +=  speed;
