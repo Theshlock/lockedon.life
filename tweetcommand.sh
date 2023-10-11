@@ -1,6 +1,7 @@
 #!/bin/bash
 #samuel@lockedon.life 2023.
 #Modified https://gist.github.com/gsilos/77109ba9afdde584e6e79e4cfc1c24f2
+
 source .twitterkeys
 
 
