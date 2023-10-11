@@ -823,7 +823,6 @@ var portalX = xy[0];
 var portalY = xy[1];
 var portalDepth = 200000000000000000;
 var time = Date.now();
-var score = 0;
 
 contextM = mc.getContext('2d');
 contextM.fillStyle = 'green';
@@ -899,9 +898,6 @@ function gameloop() {
 		window.requestAnimationFrame(gameloop);
 	} else if (status == "game complete") {
 		contextM.fillText("You won!", 400, 300);
-		contextM.fillText(score, 150, 50);
-		contextM.fillText("score:", 50, 50);
-		contextM.fillText("Refresh to play again", 400, 500);
 		window.requestAnimationFrame(gameloop);
 	}
 }
