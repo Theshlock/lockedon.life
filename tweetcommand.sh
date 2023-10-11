@@ -19,7 +19,7 @@ PARAM=$(urlencode "oauth_consumer_key=$consumer_key&oauth_nonce=$nonce&oauth_sig
 signature=$(echo -n 'POST&'$encodedURL'&'$PARAM|openssl dgst -sha1 -binary -hmac "$consumer_secret&$token_secret" |base64)
 encoded_signature=$(urlencode $signature)
 
-data="dynamic message"
+data="dynamic message2"
 echo $data
 curl -v  -X POST \
   $url \
