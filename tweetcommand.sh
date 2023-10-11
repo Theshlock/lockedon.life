@@ -1,8 +1,8 @@
 #!/bin/bash
-
+#Locked On Life 2023.
+#Modified https://gist.github.com/gsilos/77109ba9afdde584e6e79e4cfc1c24f2
 source .twitterkeys
 
-# oauth1 simulator http://lti.tools/oauth/
 
 urlencode () {
         [ -n "$1" ] \
