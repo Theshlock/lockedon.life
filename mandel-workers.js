@@ -884,7 +884,7 @@ function gameloop() {
 		console.log("x:", xnorm-portalX);
 		console.log("y:", ynorm-portalY);
 //		zoom *= 1 + 0.01*multiplier;
-		zoom *= Math.abs(xnorm-portalX);
+		zoom *= 1 + Math.abs(xnorm-portalX)/1000;
 
 		time = Date.now();
 		screenX = Math.round(-xnorm * zoom + canvasWidth/2);
