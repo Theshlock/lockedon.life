@@ -794,7 +794,6 @@ drawMandel();
 
 
 // Game Code
-var speed = 0.1;
 var xRate = 0;
 var yRate = 0;
 var up = 0;
