@@ -8,10 +8,10 @@ urlencode () {
 }
 
 #oauth1 vars
-consumer_key="y1sUvQRYSbbmfsjJAvIYNSZfZ"
-consumer_secret="laClGm4WFlh8tk0Xami0edxRzjxTHDeL8EAAbsdmoBVIqKe38Z"
-token="1467985006530162690-A4APXbr12fTu2LMm2sKjrebViSUYoq"
-token_secret="Iqe2cqTzNDeJ1iTp2T91tOMt5rZKFandMfFbjW2ctxnVf"
+consumer_key=""
+consumer_secret=""
+token=""
+token_secret=""
 signature_method='HMAC-SHA1'
 timestamp=$(date +%s)
 #timestamp=1556970530
