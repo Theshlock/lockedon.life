@@ -26,4 +26,4 @@ curl -v  -X POST \
   -H "Authorization: OAuth oauth_consumer_key=\"$consumer_key\",oauth_token=\"$token\",oauth_signature_method=\"$signature_method\",oauth_timestamp=\"$timestamp\",oauth_nonce=\"$nonce\",oauth_version=\"1.0\",oauth_signature=\"$encoded_signature\"" \
   -H 'Content-Type: application/json' \
   -H 'cache-control: no-cache' \
-  -d '{ "text" : '"'test e decoute'"' } '
+  -d '{ "text" : "test e decoute" } '
