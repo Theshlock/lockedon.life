@@ -882,10 +882,6 @@ function gameloop() {
 		ynorm += ( yRate / zoom ) * ( Date.now() - time ) / 10;
 		zoom *= 1 + 0.01*multiplier;
 
-		//speed += 0;
-		//zoom +=  speed;
-		//reset if zoomed all the way out
-		if (zoom < 100) {zoom = 100; speed = 0.1; xnorm = 0; ynorm = 0; xRate = 0; yRate = 0};
 		time = Date.now();
 		screenX = Math.round(-xnorm * zoom + canvasWidth/2);
 		screenY = Math.round(-ynorm * zoom + canvasHeight/2);
