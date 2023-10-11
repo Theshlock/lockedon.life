@@ -884,9 +884,7 @@ function gameloop() {
 
 		time = Date.now();
 		screenX = Math.round(-xnorm * zoom + canvasWidth/2);
-		console.log(screenX);
 		screenY = Math.round(-ynorm * zoom + canvasHeight/2);
-		console.log(screenY);
 		startRender(1,1);
 	        if( zoom > portalDepth ) {
 			if ( -800 < (((portalX-xnorm) * zoom + 800) / 2) && (((portalX-xnorm) * zoom + 800) / 2) < 800 && -1200 < (((portalY-ynorm) * zoom + 600) / 2) && (((portalX-xnorm) * zoom + 800) / 2) < 1200) {
