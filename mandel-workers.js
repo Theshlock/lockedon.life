@@ -36,8 +36,6 @@ var currentPalette = -1;
 var currentRotation = 0;
 var rotating = 0;
 var renderCount = 0;
-var travelling = 0;
-var movingToSaved = 0;
 var destX = 0;
 var destY = 0;
 var destZoom = 0;
@@ -208,8 +206,6 @@ function incrPalette( event )
 
 function changePalette()
 {
-	if( travelling > 0 )
-		return;
 	var i;
 	var r;
 	var g;
