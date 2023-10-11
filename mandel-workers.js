@@ -17,7 +17,7 @@ const scaleFactor = 2;
 const coarseWidth = canvasWidth/scaleFactor;
 const coarseHeight = canvasHeight/scaleFactor;
 
-var screenX = canvasWidth/2+400;
+var screenX = canvasWidth/2;
 var screenY = canvasHeight/2;
 var xnorm = 2.0;
 var ynorm = 0.0;
