@@ -150,8 +150,6 @@ vga = [0,43520,11141120,11184640,2852126720,2852170240,2857697280,2863311360,143
 
 function toggleRotatePalette()
 {
-	if( travelling > 0 )
-		return;
 	rotating = 1-rotating;
 	if( rotating ) {
 		cycleText.innerHTML="Stop";
@@ -193,8 +191,6 @@ function rotatePalette( steps )
 
 function decrPalette( event )
 {
-	if( travelling > 0 )
-		return;
 	currentPalette--;
 	if( currentPalette < 0 )
 		currentPalette = paletteCount;
@@ -203,8 +199,6 @@ function decrPalette( event )
 
 function incrPalette( event )
 {
-	if( travelling > 0 )
-		return;
 	currentPalette++;
 	if( currentPalette > paletteCount )
 		currentPalette = 0;
