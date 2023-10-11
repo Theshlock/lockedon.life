@@ -823,12 +823,12 @@ var portalX = xy[0];
 var portalY = xy[1];
 var portalDepth = 200000000000000000;
 var time = Date.now();
+var score = 0;
 
 contextM = mc.getContext('2d');
 contextM.fillStyle = 'green';
 contextM.font = "24px Arial";
 
-var score = 0;
 var status = "main menu"
 startTime = Date.now();
 
@@ -852,8 +852,10 @@ multiplier = 1;
 function gameloop() {
 
 	if (status == "main menu") {
-		xnorm = -1.76877851023801;
-		ynorm = -0.00173889944794;
+//		xnorm = -1.76877851023801; Sexy values for menu
+//		ynorm = -0.00173889944794; revert when zoom function is done
+		xnorm = -2;
+		ynorm = 0;
 		zoom *= 1.01;
 		startRender(1,1);
 		window.requestAnimationFrame(gameloop);
@@ -877,6 +879,9 @@ function gameloop() {
 		yRate += ( down - up + ( -my / 1000) ) / 10 * ( Date.now() - time ) / 10;
 		xnorm += ( xRate / zoom ) * ( Date.now() - time)  / 10;
 		ynorm += ( yRate / zoom ) * ( Date.now() - time ) / 10;
+
+		//compute distance of position to portal
+		console.log = 
 		zoom *= 1 + 0.01*multiplier;
 
 		time = Date.now();
