@@ -49,7 +49,6 @@ var needToRun = new Uint8Array(16);
 var finished = new Uint8Array(16);
 var timesTaken = new Array(20);
 var timesTakenSorted = new Array(20);
-var benchmarkTime = 2;
 var drawingJulia = 0;
 needToRun[0] = 0;
 needToRun[1] = 0;
