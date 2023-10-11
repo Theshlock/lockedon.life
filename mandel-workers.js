@@ -880,6 +880,7 @@ function gameloop() {
 		yRate += ( down - up + ( -my / 1000) ) / 10 * ( Date.now() - time ) / 10;
 		xnorm += ( xRate / zoom ) * ( Date.now() - time)  / 10;
 		ynorm += ( yRate / zoom ) * ( Date.now() - time ) / 10;
+		zoom = zoom * (1.001 * (Date.now() - time) )
 		speed += 0;
 		zoom +=  speed;
 		//reset if zoomed all the way out
