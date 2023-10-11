@@ -850,12 +850,9 @@ startRender(1,1);
 
 multiplier = 1;
 function gameloop() {
-
 	if (status == "main menu") {
 		xnorm = -1.76877851023801;
 		ynorm = -0.00173889944794;
-//		xnorm = -2;
-//		ynorm = 0;
 		zoom *= 1.01;
 		startRender(1,1);
 		window.requestAnimationFrame(gameloop);
@@ -863,17 +860,6 @@ function gameloop() {
 		screenY = Math.round(-ynorm * zoom + canvasHeight/2);
 	} else if (status == "playing") {
 		contextM.fillRect( (((portalX-xnorm) * zoom + 800) / 2) - (20 + zoom/portalDepth*1000) / 2, (((portalY-ynorm) * zoom + 600) / 2) - (20 + zoom/portalDepth*1000) / 2, 20 + zoom/portalDepth*1000, 20 + zoom/portalDepth*1000 );
-		contextM.fillText("score:", 50, 50);
-		contextM.fillText(Date.now()-startTime, 150, 50);
-		contextM.fillText("dimension:", 50, 100);
-		contextM.fillText(dimension, 200, 100);
-		contextM.fillText(m1x, 50, 200);
-		contextM.fillText(m1y, 50, 240);
-		contextM.fillText(mx, 50, 280);
-		contextM.fillText(my, 50, 320);
-		contextM.fillText("X: " + xnorm, 50, 540);
-		contextM.fillText("Y: " + ynorm, 50, 570);
-		contextM.fillText("Z: " + zoom, 50, 600);
 
 		xRate += ( right - left + ( -mx / 1000) ) / 10 * ( Date.now() - time ) / 10;
 		yRate += ( down - up + ( -my / 1000) ) / 10 * ( Date.now() - time ) / 10;
