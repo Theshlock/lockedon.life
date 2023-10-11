@@ -852,10 +852,10 @@ multiplier = 1;
 function gameloop() {
 
 	if (status == "main menu") {
-//		xnorm = -1.76877851023801; Sexy values for menu
-//		ynorm = -0.00173889944794; revert when zoom function is done
-		xnorm = -2;
-		ynorm = 0;
+		xnorm = -1.76877851023801;
+		ynorm = -0.00173889944794;
+//		xnorm = -2;
+//		ynorm = 0;
 		zoom *= 1.01;
 		startRender(1,1);
 		window.requestAnimationFrame(gameloop);
