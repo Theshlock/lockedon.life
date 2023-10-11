@@ -11,12 +11,7 @@ urlencode () {
 
 signature_method='HMAC-SHA1'
 timestamp=$(date +%s)
-#timestamp=1556970530
-#linux
 nonce=$(md5sum <<< "$RANDOM-$(date +%s.%N)" | cut -d' ' -f 1)
-#mac
-#nonce=$(md5 <<< "$RANDOM-$(gdate +%s.%N)" | cut -d' ' -f 1)
-#nonce=1
 
 url="https://api.twitter.com/2/tweets"
 encodedURL=$(urlencode $url)
