@@ -848,7 +848,6 @@ document.getElementById("overlay2").appendChild(privacyPolicyButton);
 
 startRender(1,1);
 
-multiplier = 1;
 function gameloop() {
 	if (status == "main menu") {
 		xnorm = -1.76877851023801;
