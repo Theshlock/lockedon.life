@@ -809,6 +809,11 @@ document.getElementById("menu2").appendChild(privacyPolicyButton);
 
 startRender(1,1);
 
+function play() {
+	document.getElementById("menu").style.display = "none";
+	status = "playing";
+}
+
 function gameloop() {
 	if (status == "main menu") {
 		xnorm = -1.76877851023801;
