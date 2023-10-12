@@ -790,13 +790,18 @@ contextM = mc.getContext('2d');
 contextM.fillStyle = 'green';
 contextM.font = "24px Arial";
 
-var status = "main menu"
+var status
+
+menu()
+
 startTime = Date.now();
 
 startRender(1,1);
 
 function menu() {
-	document.getElementById("menu").style.display = "none";
+	status="menu'd";
+	document.getElementById("play").style.display = "none";
+	document.getElementById("menu").style.display = "flex";
 }
 
 function play() {
@@ -806,6 +811,7 @@ function play() {
 }
 
 function pause() {
+	status = "paused"
 	document.getElementById("play").style.display = "none";
 	document.getElementById("pause").style.display = "flex";
 }
@@ -816,7 +822,7 @@ function resume() {
 }
 
 function gameloop() {
-	if (status == "main menu") {
+	if (status == "menu'd") {
 		xnorm = -1.76877851023801;
 		ynorm = -0.00173889944794;
 		zoom *= 1.01;
