@@ -823,7 +823,8 @@ function pause() {
 }
 
 function resume() {
-	status = "playing"
+	time=Date.now();
+	status = "playing";
 	document.getElementById("pause").style.display = "none";
 	document.getElementById("play").style.display = "flex";
 }
