@@ -798,6 +798,11 @@ startRender(1,1);
 function play() {
 	document.getElementById("menu").style.display = "none";
 	status = "playing";
+	document.getElementById("playing").style.display = "flex";
+}
+
+function pause() {
+
 }
 
 function gameloop() {
