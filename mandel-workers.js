@@ -13,7 +13,7 @@ var zoom = 100;
 
 const canvasWidth = 800*2;
 const canvasHeight = 600*2;
-const scaleFactor = 1.8;
+const scaleFactor = 2;
 
 const coarseWidth = canvasWidth/scaleFactor;
 const coarseHeight = canvasHeight/scaleFactor;
