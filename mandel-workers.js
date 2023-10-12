@@ -518,27 +518,6 @@ function changePalette()
 	startRender( 0,0 );
 }
 
-document.body.onmousedown = function( e )
-{
-	mousePressed = 1;
-	var rect = mc.getBoundingClientRect();
-	var cx = ( e.clientX - rect.left ) ;
-	var cy = ( e.clientY - rect.top ) ;
-	var xnorm = (canvasWidth/2-screenX)/zoom;
-	var ynorm = (canvasHeight/2-screenY)/zoom;
-	var zooming = 0;
-}
-
-document.body.onmouseup = function()
-{
-	mousePressed = 0;
-	oldMouseX = -1;
-	oldMouseY = -1;
-	for( i=0; i<workers; i++ )
-		if( blockSize[i] > 1 )
-			startRender( 1,1 );
-}
-
 // Return whether or not a normalized point is in our viewport
 function pointOnScreen( x,y )
 {
