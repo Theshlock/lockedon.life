@@ -799,7 +799,9 @@ startTime = Date.now();
 startRender(1,1);
 
 function menu() {
-	status="menu'd";
+	status="menu";
+		xnorm = -1.76877851023801;
+		ynorm = -0.00173889944794;
 	document.getElementById("play").style.display = "none";
 	document.getElementById("menu").style.display = "flex";
 }
@@ -817,14 +819,13 @@ function pause() {
 }
 
 function resume() {
+	status = "playing"
 	document.getElementById("pause").style.display = "none";
 	document.getElementById("play").style.display = "flex";
 }
 
 function gameloop() {
-	if (status == "menu'd") {
-		xnorm = -1.76877851023801;
-		ynorm = -0.00173889944794;
+	if (status == "menu") {
 		zoom *= 1.01;
 		startRender(1,1);
 		window.requestAnimationFrame(gameloop);
