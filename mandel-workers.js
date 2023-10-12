@@ -868,6 +868,8 @@ function gameloop() {
 			score = Date.now()-startTime;
 		}
 	        window.requestAnimationFrame(gameloop);
+	} else if (status == "paused") {
+		window.requestAnimationFrame(gameloop);
 	} else if (status == "game over") {
 		contextM.fillText("Game over: You missed the portal", 400, 300);
 		window.requestAnimationFrame(gameloop);
