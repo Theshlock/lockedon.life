@@ -795,6 +795,10 @@ startTime = Date.now();
 
 startRender(1,1);
 
+function menu() {
+	document.getElementById("menu").style.display = "none";
+}
+
 function play() {
 	status = "playing";
 	document.getElementById("menu").style.display = "none";
@@ -804,6 +808,11 @@ function play() {
 function pause() {
 	document.getElementById("play").style.display = "none";
 	document.getElementById("pause").style.display = "flex";
+}
+
+function resume() {
+	document.getElementById("pause").style.display = "none";
+	document.getElementById("play").style.display = "flex";
 }
 
 function gameloop() {
