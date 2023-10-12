@@ -829,9 +829,9 @@ function gameloop() {
 	if (status == "menu") {
 		zoom *= 1.01;
 		startRender(1,1);
+//		screenX = Math.round(-xnorm * zoom + canvasWidth/2);
+//		screenY = Math.round(-ynorm * zoom + canvasHeight/2);
 		window.requestAnimationFrame(gameloop);
-		screenX = Math.round(-xnorm * zoom + canvasWidth/2);
-		screenY = Math.round(-ynorm * zoom + canvasHeight/2);
 	} else if (status == "playing") {
 		contextM.fillRect( (((portalX-xnorm) * zoom + 800) / 2) - (20 + zoom/portalDepth*1000) / 2, (((portalY-ynorm) * zoom + 600) / 2) - (20 + zoom/portalDepth*1000) / 2, 20 + zoom/portalDepth*1000, 20 + zoom/portalDepth*1000 );
 
