@@ -793,20 +793,6 @@ contextM.font = "24px Arial";
 var status = "main menu"
 startTime = Date.now();
 
-// menu overlay
-const playButton = document.createElement('button');
-playButton.className = 'button';
-playButton.textContent = 'Play!';
-playButton.addEventListener('click', () => {document.getElementById("menu").style.display = "none";status = "playing";});
-
-const privacyPolicyButton = document.createElement('button');
-privacyPolicyButton.className = 'button';
-privacyPolicyButton.textContent = 'Privacy Policy';
-privacyPolicyButton.addEventListener('click',()=>{location.href = "https://lockedon.life/lol/privacy_policy";});
-
-document.getElementById("menu2").appendChild(playButton);
-document.getElementById("menu2").appendChild(privacyPolicyButton);
-
 startRender(1,1);
 
 function play() {
