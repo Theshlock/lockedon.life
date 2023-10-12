@@ -801,6 +801,8 @@ startRender(1,1);
 function menu() {
 	document.getElementById("pause").style.display = "none";
 	status="menu";
+		xRate = 0;
+		yRate - 0;
 		xnorm = -1.76877851023801;
 		ynorm = -0.00173889944794;
 		zoom = 100;
@@ -830,7 +832,6 @@ function resume() {
 }
 
 function gameloop() {
-	console.log('xnorm ynorm, screenX, screenY, zoom', xnorm, ynorm, screenX, screenY, zoom);
 	if (status == "menu") {
 		zoom *= 1.01;
 		startRender(1,1);
