@@ -828,6 +828,7 @@ function gameloop() {
 		screenX = canvasWidth/2;
 		screenY = canvasHeight/2;
 	} else if (status == "playing") {
+//factor offset!
 		contextM.fillRect( xnorm , ynorm , 20 , 20 );
 		contextM.fillRect( xnorm + 780 , ynorm , 20 , 20 );
 		contextM.fillRect( xnorm , ynorm + 580, 20 , 20 );
