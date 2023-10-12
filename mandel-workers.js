@@ -823,7 +823,7 @@ playButton.addEventListener('click', () => {document.getElementById("overlay").s
 const privacyPolicyButton = document.createElement('button');
 privacyPolicyButton.className = 'button';
 privacyPolicyButton.textContent = 'Privacy Policy';
-privacyPolicyButton.addEventListener('click',()=>{location.href = "https://lockedon.life/privacy";});
+privacyPolicyButton.addEventListener('click',()=>{location.href = "https://lockedon.life/lol/privacy_policy";});
 
 document.getElementById("overlay2").appendChild(playButton);
 document.getElementById("overlay2").appendChild(privacyPolicyButton);
