@@ -828,7 +828,10 @@ function gameloop() {
 		screenX = canvasWidth/2;
 		screenY = canvasHeight/2;
 	} else if (status == "playing") {
-		contextM.fillRect( (( zoom + 800 ) / 2) - (20 + zoom/portalDepth*1000), ((zoom + 600) / 2) - (20 + zoom/portalDepth*1000) / 2, 20, 20 );
+		contextM.fillRect( 0, 0, 20, 20 );
+		contextM.fillRect( 100, 100, 20, 20 );
+		contextM.fillRect( 200, 200, 20, 20 );
+		contextM.fillRect( 400, 400, 20, 20 );
 		contextM.fillRect( (((portalX-xnorm) * zoom + 800) / 2) - (20 + zoom/portalDepth*1000) / 2, (((portalY-ynorm) * zoom + 600) / 2) - (20 + zoom/portalDepth*1000) / 2, 20 + zoom/portalDepth*1000, 20 + zoom/portalDepth*1000 );
 
 		xRate += ( right - left + ( -mx / 1000) ) / 10 * ( Date.now() - time ) / 10;
