@@ -829,6 +829,7 @@ function resume() {
 }
 
 function gameloop() {
+	console.log('xnorm ynorm, screenX, screenY, zoom', xnorm, ynorm, screenX, screenY, zoom);
 	if (status == "menu") {
 		zoom *= 1.01;
 		startRender(1,1);
