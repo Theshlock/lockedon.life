@@ -6,14 +6,14 @@
    Modification and distribution permitted under terms of the Affero GPL version 3
 */
 
-//var mousePressed = 0;
+var mousePressed = 0;
 var iterations = 1000;
 var maxBlockSize = 8;
 var zoom = 100;
 
 const canvasWidth = 800*2;
 const canvasHeight = 600*2;
-const scaleFactor = 2;
+const scaleFactor = 1.8;
 
 const coarseWidth = canvasWidth/scaleFactor;
 const coarseHeight = canvasHeight/scaleFactor;
@@ -681,7 +681,7 @@ function startRender( lneedRecompute, blocky )
 
 function drawMandel()
 {
-	const iter_max = 1000;
+	const iter_max = iterations;
 	const lcanvasWidth = canvasWidth;
 	const lcanvasHeight = canvasHeight;
 	const lscreenX = screenX;
