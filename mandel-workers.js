@@ -828,11 +828,7 @@ function gameloop() {
 		screenX = canvasWidth/2;
 		screenY = canvasHeight/2;
 	} else if (status == "playing") {
-		contextM.fillRect( 0, 0, 20, 20 );
-		contextM.fillRect( 0, 580, 20, 20 );
-		contextM.fillRect( 780, 0, 20, 20 );
-		contextM.fillRect( 780, 580, 20, 20 );
-		contextM.fillRect( (((portalX-xnorm) * zoom + 800)) / 2, (((portalY-ynorm) * zoom + 600)) / 2, 20 , 20 );
+		contextM.fillRect( (((screenX-xnorm) * zoom + 800)) / 2 - 200, (((screenY-ynorm) * zoom + 600)) / 2 - 200, 20 , 20 );
 		contextM.fillRect( (((portalX-xnorm) * zoom + 800)) / 2, (((portalY-ynorm) * zoom + 600)) / 2, 20 , 20 );
 		contextM.fillRect( (((portalX-xnorm) * zoom + 800)) / 2, (((portalY-ynorm) * zoom + 600)) / 2, 20 , 20 );
 		contextM.fillRect( (((portalX-xnorm) * zoom + 800)) / 2, (((portalY-ynorm) * zoom + 600)) / 2, 20 , 20 );
