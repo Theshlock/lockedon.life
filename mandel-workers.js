@@ -796,13 +796,14 @@ startTime = Date.now();
 startRender(1,1);
 
 function play() {
-	document.getElementById("menu").style.display = "none";
 	status = "playing";
-	document.getElementById("playing").style.display = "flex";
+	document.getElementById("menu").style.display = "none";
+	document.getElementById("play").style.display = "flex";
 }
 
 function pause() {
-
+	document.getElementById("play").style.display = "none";
+	document.getElementById("pause").style.display = "flex";
 }
 
 function gameloop() {
