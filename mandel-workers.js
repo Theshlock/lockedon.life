@@ -799,6 +799,7 @@ startTime = Date.now();
 startRender(1,1);
 
 function menu() {
+	document.getElementById("pause").style.display = "none";
 	status="menu";
 		xnorm = -1.76877851023801;
 		ynorm = -0.00173889944794;
