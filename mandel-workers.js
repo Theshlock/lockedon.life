@@ -804,6 +804,8 @@ function menu() {
 		xnorm = -1.76877851023801;
 		ynorm = -0.00173889944794;
 		zoom = 100;
+		screenX = canvasWidth/2;
+		screenY = canvasHeight/2;
 	document.getElementById("play").style.display = "none";
 	document.getElementById("menu").style.display = "flex";
 }
