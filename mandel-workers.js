@@ -839,9 +839,10 @@ function gameloop() {
 		contextM.fillStyle = 'black';
 		contextM.fillRect( (((portalX-xnorm) * zoom + 800) / 2 ), (((portalY-ynorm) * zoom + 600) / 2 ) , 10, 10);
 		contextM.fillStyle = 'green';
-		console.log(((xnorm - portalX)*zoom)/1600); // x distance from origin as a factor of screen width
-		console.log(((ynorm - portalY)*zoom)/1200); // y distance from origin as a factor of screen width
-		console.log(((((xnorm - portalX)*zoom)/1600)**2 + ((ynorm-portalY)*zoom/1200)**2)**0.5);
+//		console.log(((xnorm - portalX)*zoom)/1600); // x distance from origin as a factor of screen width
+//		console.log(((ynorm - portalY)*zoom)/1200); // y distance from origin as a factor of screen width
+//		console.log(((((xnorm - portalX)*zoom)/1600)**2 + ((ynorm-portalY)*zoom/1200)**2)**0.5);
+		console.log(-Math.log2(((((xnorm - portalX)*zoom)/1600)**2 + ((ynorm-portalY)*zoom/1200)**2)**0.5));
 		xRate += ( right - left + ( -mx / 1000) ) / 10 * ( Date.now() - time ) / 10;
 		yRate += ( down - up + ( -my / 1000) ) / 10 * ( Date.now() - time ) / 10;
 		xnorm += ( xRate / zoom ) * ( Date.now() - time)  / 10;
