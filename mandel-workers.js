@@ -839,7 +839,7 @@ function gameloop() {
 		contextM.fillStyle = 'black';
 		contextM.fillRect( (((portalX-xnorm) * zoom + 800) / 2 ), (((portalY-ynorm) * zoom + 600) / 2 ) , 10, 10);
 		contextM.fillStyle = 'green';
-
+		console.log( ( ( 400 -  ((portalX-xnorm) * zoom + 800) / 2 )**2 + (300 - ((portalY-ynorm) * zoom + 600) / 2 )**2)**0.5);
 		xRate += ( right - left + ( -mx / 1000) ) / 10 * ( Date.now() - time ) / 10;
 		yRate += ( down - up + ( -my / 1000) ) / 10 * ( Date.now() - time ) / 10;
 		xnorm += ( xRate / zoom ) * ( Date.now() - time)  / 10;
