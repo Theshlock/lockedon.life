@@ -846,7 +846,7 @@ function gameloop() {
 		ynorm += ( yRate / zoom ) * ( Date.now() - time ) / 10;
 
 		multiplier=2**(2 + -Math.log10((((xnorm-portalX)*zoom)**2 + ((ynorm-portalY)*zoom)**2)**0.5));
-		zoom *= 1 + 0.02*multiplier;
+		zoom *= 1 + 0.02 * multiplier;
 
 		time = Date.now();
 		screenX = Math.round(-xnorm * zoom + canvasWidth/2);
