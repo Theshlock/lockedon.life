@@ -830,14 +830,7 @@ function gameloop() {
 		window.requestAnimationFrame(gameloop);
 		screenX = canvasWidth/2;
 		screenY = canvasHeight/2;
-
-		contextM.fillText( touchDevice, 400, 300);
 	} else if (status == "playing") {
-//factor offset!
-		contextM.fillRect( xnorm , ynorm , 20 , 20 );
-		contextM.fillRect( xnorm + 780 , ynorm , 20 , 20 );
-		contextM.fillRect( xnorm , ynorm + 580, 20 , 20 );
-		contextM.fillRect( xnorm + 780, ynorm + 580, 20 , 20 );
 		contextM.fillRect( xnorm , ynorm , 20 , 20 );
 		contextM.fillRect( (((portalX-xnorm) * zoom + 800) / 2 ) - (20 + zoom/portalDepth*1000) / 2, (((portalY-ynorm) * zoom + 600) / 2 ) - (20 + zoom/portalDepth*1000) / 2, 20 + zoom/portalDepth*1000, 20 + zoom/portalDepth*1000 );
 		contextM.fillStyle = 'black';
@@ -849,11 +842,12 @@ function gameloop() {
 		ynorm += ( yRate / zoom ) * ( Date.now() - time ) / 10;
 		multiplier = -0.5 -Math.log2(((((xnorm - portalX)*zoom)/1600)**2 + ((ynorm-portalY)*zoom/1200)**2)**0.5);
 		zoom *= 1 + 0.01 * multiplier;
-
 		time = Date.now();
 		screenX = Math.round(-xnorm * zoom + canvasWidth/2);
 		screenY = Math.round(-ynorm * zoom + canvasHeight/2);
 		startRender(1,1);
+		contextM.fillText( touchDevice, 400, 300);
+
 	        if( zoom > portalDepth ) {
 			if ( -800 < (((portalX-xnorm) * zoom + 800) / 2) && (((portalX-xnorm) * zoom + 800) / 2) < 800 && -1200 < (((portalY-ynorm) * zoom + 600) / 2) && (((portalX-xnorm) * zoom + 800) / 2) < 1200) {
 				console.log("passed");
