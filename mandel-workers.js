@@ -821,6 +821,8 @@ function resume() {
 	document.getElementById("play").style.display = "flex";
 }
 
+var touchDevice = ('ontouchstart' in document.documentElement);
+
 function gameloop() {
 	if (status == "menu") {
 		zoom *= 1.01;
@@ -828,6 +830,8 @@ function gameloop() {
 		window.requestAnimationFrame(gameloop);
 		screenX = canvasWidth/2;
 		screenY = canvasHeight/2;
+
+		contextM.fillText( touchDevice, 400, 300);
 	} else if (status == "playing") {
 //factor offset!
 		contextM.fillRect( xnorm , ynorm , 20 , 20 );
