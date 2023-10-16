@@ -4,7 +4,6 @@
 
 source .twitterkeys
 
-
 urlencode () {
         [ -n "$1" ] \
         && echo -n "$1" | perl -p -e 's/([^A-Za-z0-9-._~])/sprintf("%%%02X", ord($1))/seg'
