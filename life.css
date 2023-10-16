@@ -47,6 +47,11 @@ img.vert-move {
   0% { transform: translateY(0); }
   100% { transform: translateY(-10px); }
 }
+.set {
+    overflow: hidden;
+    padding: 30px;
+    text-align: center;
+}
 .o-pad a {
     display: block;
     position: absolute;
