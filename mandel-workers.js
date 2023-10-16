@@ -599,22 +599,9 @@ var onRenderEnded = function (e)
 
 // Mobile Control
 
-function up() {
-
-}
-function up() {
-
-}
-function up() {
-
-}
-function up() {
-
-}
-
 function touchEnd(event)
 {
-	touchEvent = 0;
+	up = down = left = right = 0;
 }
 
 // Engine Code
