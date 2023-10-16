@@ -599,12 +599,6 @@ var onRenderEnded = function (e)
 
 // Mobile Control
 
-var m1x = 0.0;
-var m1y = 0.0;
-var mx = 0.0;
-var my = 0.0;
-var touchEvent = 0;
-
 function up() {
 
 }
