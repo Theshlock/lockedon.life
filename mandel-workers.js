@@ -825,8 +825,8 @@ function gameloop() {
 		contextM.fillStyle = 'black';
 		contextM.fillRect( (((portalX-xnorm) * zoom + 800) / 2 ), (((portalY-ynorm) * zoom + 600) / 2 ) , 10, 10);
 		contextM.fillStyle = 'green';
-		xRate += ( right - left + ( -mx / 1000) ) / 10 * ( Date.now() - time ) / 10;
-		yRate += ( down - up + ( -my / 1000) ) / 10 * ( Date.now() - time ) / 10;
+		xRate += (right - left) * ( Date.now() - time ) / 100;
+		yRate += (down - up) * ( Date.now() - time ) / 100;
 		xnorm += ( xRate / zoom ) * ( Date.now() - time)  / 10;
 		ynorm += ( yRate / zoom ) * ( Date.now() - time ) / 10;
 		multiplier = -0.5 -Math.log2(((((xnorm - portalX)*zoom)/1600)**2 + ((ynorm-portalY)*zoom/1200)**2)**0.5);
