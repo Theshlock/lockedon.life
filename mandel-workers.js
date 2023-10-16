@@ -115,8 +115,6 @@ for( i=0; i < workers; i++ ) {
 
 var worker = 0;
 
-mc.addEventListener( "touchstart", touchStart, false );
-mc.addEventListener( "touchmove", touchMove, false );
 mc.addEventListener( "touchend", touchEnd, false );
 
 window.addEventListener("resize", setViewport, false);
@@ -607,20 +605,17 @@ var mx = 0.0;
 var my = 0.0;
 var touchEvent = 0;
 
-function touchStart(event)
-{
-	touchEvent = 1;
-	mx = 0.0;
-	my = 0.0;
-	m1x = event.targetTouches[0].clientX
-	m1y = event.targetTouches[0].clientY
-}
+function up() {
 
-function touchMove(event)
-{
-	mx = m1x - event.targetTouches[0].clientX;
-	my = m1y - event.targetTouches[0].clientY;
-	event.preventDefault();
+}
+function up() {
+
+}
+function up() {
+
+}
+function up() {
+
 }
 
 function touchEnd(event)
