@@ -197,7 +197,7 @@ function changePalette()
 	var b;
 	currentRotation = 0;
 	switch( currentPalette ) {
-	case 0: // Original DarkBlue-Yellow-Rose-Green
+	case 14: // Original DarkBlue-Yellow-Rose-Green
 		for( i=0; i<255; i++ ) {
 			if( i < 32 ) {
 				r = i*8;
@@ -462,7 +462,7 @@ function changePalette()
 			colours[i] = (r<<24) + (g<<16) + (b<<8);
 		}
 		break;
-	case 13: // Purple/Orange/Aqua/Green on black
+	case 0: // Purple/Orange/Aqua/Green on black
 		for( i=0; i<255; i++ ) {
 			if( i < 32 ) {
 				r = i*4;
