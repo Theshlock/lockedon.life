@@ -219,7 +219,7 @@ function changePalette()
 			colours[i] = (r<<24) + (g<<16) + (b<<8);
 		}
 		break;
-	case 1: // Fire
+	case 3: // Fire
 		for( i=0; i<255; i++ ) {
 			if( i < 64 ) {
 				r = i*4;
@@ -256,7 +256,7 @@ function changePalette()
 			colours[i] = (r<<24) + (g<<16) + (b<<8);
 		}
 		break;
-	case 3: // Electric blue
+	case 1: // Electric blue
 		for( i=0; i<255; i++ ) {
 			if( i < 32 ) {
 				r = 0;
