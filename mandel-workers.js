@@ -197,46 +197,40 @@ function changePalette()
 	var b;
 	currentRotation = 0;
 	switch( currentPalette ) {
-	case 14: // Original DarkBlue-Yellow-Rose-Green
+	case 0: // Purple/Orange/Aqua/Green on black
 		for( i=0; i<255; i++ ) {
 			if( i < 32 ) {
-				r = i*8;
-				g = i*8;
-				b = 127-i*4;
-			} else if( i < 128 ) {
-				r = 255;
-			 	g = 255-(i-32)*8/3;
-				b = (i-32)*4/3;
-			} else if( i < 192 ){
-				r = 255 - (i-128)*4;
-				g = 0 + (i-128)*3;
-				b = 127 - (i-128);
-			} else {
-				r = 0;
-				g = 192-(i-192)*3;
-				b = 64+(i-192);
-			}
-			colours[i] = (r<<24) + (g<<16) + (b<<8);
-		}
-		break;
-	case 3: // Fire
-		for( i=0; i<255; i++ ) {
-			if( i < 64 ) {
 				r = i*4;
 				g = 0;
+				b = i*8;
+			} else if( i < 64 ) {
+				r = 124-(i-32)*4;
+			 	g = 0;
+				b = 248-(i-32)*8;
+			} else if( i < 96 ){
+				r = (i-64)*8;
+				g = (i-64)*4;
 				b = 0;
-			} else if( i < 128 ) {
-				r = 255;
-			 	g = (i-64)*2;
+			} else if( i < 128 ){
+				r = 248-(i-96)*8;
+				g = 124-(i-96)*4;
 				b = 0;
-			} else if( i < 192 ){
-				r = 255;
-				g = 128-((i-128)*2);
-				b = 0;
-			} else {
-				r = 255-(i-192)*4;
-				g = 0;
-				b = 0;
+			} else if( i < 160 ) {
+				r = 0;
+				g = (i-128)*4;
+				b = (i-128)*8;
+			} else if( i < 192 ) {
+				r = 0;
+				g = 124-(i-160)*4;
+				b = 248-(i-160)*8;
+			} else if( i < 224 ) {
+				r = (i-192)*4;
+				g = (i-192)*8;
+				b = (i-192)*4;
+			} else  {
+				r = 124-(i-224)*4;
+				g = 248-(i-224)*8;
+				b = 124-(i-224)*4;
 			}
 			colours[i] = (r<<24) + (g<<16) + (b<<8);
 		}
@@ -271,33 +265,29 @@ function changePalette()
 			colours[i] = (r<<24) + (g<<16) + (b<<8);
 		}
 		break;
-	case 4: // Stripes
+	case 2: // Fire
 		for( i=0; i<255; i++ ) {
-			if( i % 4 == 0 ) {
-				r = 100;
-				g = 20;
-				b = 200;
-			}
-			else if ( i % 4 == 1 ) {
-				r = 220;
-				g = 112;
+			if( i < 64 ) {
+				r = i*4;
+				g = 0;
 				b = 0;
-			}
-			else if ( i % 4 == 2 ) {
-				r = 230;
-				g = 120;
-				b = 0;
-			}
-			else {
+			} else if( i < 128 ) {
 				r = 255;
-				g = 128;
+			 	g = (i-64)*2;
+				b = 0;
+			} else if( i < 192 ){
+				r = 255;
+				g = 128-((i-128)*2);
+				b = 0;
+			} else {
+				r = 255-(i-192)*4;
+				g = 0;
 				b = 0;
 			}
 			colours[i] = (r<<24) + (g<<16) + (b<<8);
-			//console.log(i+" "+r+" "+g+" "+b);
 		}
 		break;
-	case 5: // Gold
+	case 3: // Gold
 		for( i=0; i<255; i++ ) {
 			if( i < 32 ) {
 				r = 54 + Math.floor((i)*(224-54)/32);
@@ -323,6 +313,54 @@ function changePalette()
 				r = 255 + Math.floor((i-224)*(54-255)/32);
 				g = 192 + Math.floor((i-224)*(11-192)/32);
 				b = 49 + Math.floor((i-224)*(2-49)/32);
+			}
+			colours[i] = (r<<24) + (g<<16) + (b<<8);
+			//console.log(i+" "+r+" "+g+" "+b);
+		}
+		break;
+	case 14: // Original DarkBlue-Yellow-Rose-Green
+		for( i=0; i<255; i++ ) {
+			if( i < 32 ) {
+				r = i*8;
+				g = i*8;
+				b = 127-i*4;
+			} else if( i < 128 ) {
+				r = 255;
+			 	g = 255-(i-32)*8/3;
+				b = (i-32)*4/3;
+			} else if( i < 192 ){
+				r = 255 - (i-128)*4;
+				g = 0 + (i-128)*3;
+				b = 127 - (i-128);
+			} else {
+				r = 0;
+				g = 192-(i-192)*3;
+				b = 64+(i-192);
+			}
+			colours[i] = (r<<24) + (g<<16) + (b<<8);
+		}
+		break;
+	case 4: // Stripes
+		for( i=0; i<255; i++ ) {
+			if( i % 4 == 0 ) {
+				r = 100;
+				g = 20;
+				b = 200;
+			}
+			else if ( i % 4 == 1 ) {
+				r = 220;
+				g = 112;
+				b = 0;
+			}
+			else if ( i % 4 == 2 ) {
+				r = 230;
+				g = 120;
+				b = 0;
+			}
+			else {
+				r = 255;
+				g = 128;
+				b = 0;
 			}
 			colours[i] = (r<<24) + (g<<16) + (b<<8);
 			//console.log(i+" "+r+" "+g+" "+b);
@@ -443,44 +481,6 @@ function changePalette()
 				r = 127 + (i-170)*3/2;
 				g = 255 - (i-170)*3;
 				b = 0 + (i-170)*3/2;
-			}
-			colours[i] = (r<<24) + (g<<16) + (b<<8);
-		}
-		break;
-	case 0: // Purple/Orange/Aqua/Green on black
-		for( i=0; i<255; i++ ) {
-			if( i < 32 ) {
-				r = i*4;
-				g = 0;
-				b = i*8;
-			} else if( i < 64 ) {
-				r = 124-(i-32)*4;
-			 	g = 0;
-				b = 248-(i-32)*8;
-			} else if( i < 96 ){
-				r = (i-64)*8;
-				g = (i-64)*4;
-				b = 0;
-			} else if( i < 128 ){
-				r = 248-(i-96)*8;
-				g = 124-(i-96)*4;
-				b = 0;
-			} else if( i < 160 ) {
-				r = 0;
-				g = (i-128)*4;
-				b = (i-128)*8;
-			} else if( i < 192 ) {
-				r = 0;
-				g = 124-(i-160)*4;
-				b = 248-(i-160)*8;
-			} else if( i < 224 ) {
-				r = (i-192)*4;
-				g = (i-192)*8;
-				b = (i-192)*4;
-			} else  {
-				r = 124-(i-224)*4;
-				g = 248-(i-224)*8;
-				b = 124-(i-224)*4;
 			}
 			colours[i] = (r<<24) + (g<<16) + (b<<8);
 		}
