@@ -107,6 +107,7 @@ img.vert-move {
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
+  opacity: 50%;
 }
 .o-pad:after {
   content: '';
