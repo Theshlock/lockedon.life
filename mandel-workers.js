@@ -241,21 +241,6 @@ function changePalette()
 			colours[i] = (r<<24) + (g<<16) + (b<<8);
 		}
 		break;
-	case 2: // Black and White
-		for( i=0; i<255; i++ ) {
-			if( i< 128 ) {
-				r = 255 - i*2;
-				g = 255 - i*2;
-				b = 255 - i*2;
-			}
-			else {
-				r = (i-128)*2;
-				g = (i-128)*2;
-				b = (i-128)*2;
-			}
-			colours[i] = (r<<24) + (g<<16) + (b<<8);
-		}
-		break;
 	case 1: // Electric blue
 		for( i=0; i<255; i++ ) {
 			if( i < 32 ) {
