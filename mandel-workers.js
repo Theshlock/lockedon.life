@@ -318,6 +318,60 @@ function changePalette()
 			//console.log(i+" "+r+" "+g+" "+b);
 		}
 		break;
+	case 4: // Primary colours (R,G,B)
+		for( i=0; i<255; i++ ) {
+			if( i < 85 ) {
+				r = 255 - i*3;
+				g = 0 + i*3;
+				b = 0;
+			} else if( i < 170 ) {
+				r = 0;
+			 	g = 255 - (i-85)*3;
+				b = 0 + (i-85)*3;
+			} else {
+				r = 0 + (i-170)*3;
+				g = 0;
+				b = 255 - (i-170)*3;
+			}
+			colours[i] = (r<<24) + (g<<16) + (b<<8);
+		}
+		break;
+	case 5: // Tertiary colours 1 (Orange, Violet, Spring Green)
+		for( i=0; i<255; i++ ) {
+			if( i < 85 ) {
+				r = 255 - i*3/2;
+				g = 127 - i*3/2;
+				b = 0 + i * 3;
+			} else if( i < 170 ) {
+				r = 127 - (i-85)*3/2;
+			 	g = 0 + (i-85)*3;
+				b = 255 - (i-85)*3/2;
+			} else {
+				r = 0 + (i-170)*3;
+				g = 255 - (i-170)*3/2;
+				b = 127 - (i-170)*3/2;
+			}
+			colours[i] = (r<<24) + (g<<16) + (b<<8);
+		}
+		break;
+	case 6: // Tertiary colours 2 (Rose, Azure, Chartreuse)
+		for( i=0; i<255; i++ ) {
+			if( i < 85 ) {
+				r = 255 - i*3;
+				g = 0 + i*3/2;
+				b = 127 + i * 3/2;
+			} else if( i < 170 ) {
+				r = 0 + (i-85)*3/2;
+			 	g = 127 + (i-85)*3/2;
+				b = 255 - (i-85)*3;
+			} else {
+				r = 127 + (i-170)*3/2;
+				g = 255 - (i-170)*3;
+				b = 0 + (i-170)*3/2;
+			}
+			colours[i] = (r<<24) + (g<<16) + (b<<8);
+		}
+		break;
 	case 14: // Original DarkBlue-Yellow-Rose-Green
 		for( i=0; i<255; i++ ) {
 			if( i < 32 ) {
@@ -412,24 +466,6 @@ function changePalette()
 				colours[i] = 4294923520;
 		}
 		break;
-	case 9: // Primary colours (R,G,B)
-		for( i=0; i<255; i++ ) {
-			if( i < 85 ) {
-				r = 255 - i*3;
-				g = 0 + i*3;
-				b = 0;
-			} else if( i < 170 ) {
-				r = 0;
-			 	g = 255 - (i-85)*3;
-				b = 0 + (i-85)*3;
-			} else {
-				r = 0 + (i-170)*3;
-				g = 0;
-				b = 255 - (i-170)*3;
-			}
-			colours[i] = (r<<24) + (g<<16) + (b<<8);
-		}
-		break;
 	case 10: // Secondary colours (C,M,Y)
 		for( i=0; i<255; i++ ) {
 			if( i < 85 ) {
@@ -449,42 +485,6 @@ function changePalette()
 		}
 		break;
 
-	case 11: // Tertiary colours 1 (Orange, Violet, Spring Green)
-		for( i=0; i<255; i++ ) {
-			if( i < 85 ) {
-				r = 255 - i*3/2;
-				g = 127 - i*3/2;
-				b = 0 + i * 3;
-			} else if( i < 170 ) {
-				r = 127 - (i-85)*3/2;
-			 	g = 0 + (i-85)*3;
-				b = 255 - (i-85)*3/2;
-			} else {
-				r = 0 + (i-170)*3;
-				g = 255 - (i-170)*3/2;
-				b = 127 - (i-170)*3/2;
-			}
-			colours[i] = (r<<24) + (g<<16) + (b<<8);
-		}
-		break;
-	case 12: // Tertiary colours 2 (Rose, Azure, Chartreuse)
-		for( i=0; i<255; i++ ) {
-			if( i < 85 ) {
-				r = 255 - i*3;
-				g = 0 + i*3/2;
-				b = 127 + i * 3/2;
-			} else if( i < 170 ) {
-				r = 0 + (i-85)*3/2;
-			 	g = 127 + (i-85)*3/2;
-				b = 255 - (i-85)*3;
-			} else {
-				r = 127 + (i-170)*3/2;
-				g = 255 - (i-170)*3;
-				b = 0 + (i-170)*3/2;
-			}
-			colours[i] = (r<<24) + (g<<16) + (b<<8);
-		}
-		break;
 
 
 	}
