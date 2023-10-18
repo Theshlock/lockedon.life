@@ -390,7 +390,7 @@ function changePalette()
 			colours[i] = (r<<24) + (g<<16) + (b<<8);
 		}
 		break;
-	case 14: // Original DarkBlue-Yellow-Rose-Green
+	case 8: // Original DarkBlue-Yellow-Rose-Green
 		for( i=0; i<255; i++ ) {
 			if( i < 32 ) {
 				r = i*8;
@@ -412,7 +412,19 @@ function changePalette()
 			colours[i] = (r<<24) + (g<<16) + (b<<8);
 		}
 		break;
-	case 4: // Stripes
+	case 9: // CGA 2
+		for( i=0; i<255; i++ ) {
+			if( i % 4 == 0 )
+				colours[i] = 0;
+			else if( i % 4 == 1 )
+				colours[i] = 1442796800;
+			else if( i % 4 == 2 )
+				colours[i] = 4283782400;
+			else if( i % 4 == 3 )
+				colours[i] = 4294923520;
+		}
+		break;
+	case 10: // Stripes
 		for( i=0; i<255; i++ ) {
 			if( i % 4 == 0 ) {
 				r = 100;
@@ -438,7 +450,7 @@ function changePalette()
 			//console.log(i+" "+r+" "+g+" "+b);
 		}
 		break;
-	case 6: // Classic VGA
+	case 11: // Classic VGA
 		for( i=0; i<255; i++ ) {
 			colours[i] = vga[i % 256];
 		}
@@ -460,7 +472,7 @@ function changePalette()
 		  14: 4294923520	Lt Yellow
 		  15: 4294967040	White
 	*/
-	case 7: // CGA 1
+	case 12: // CGA 1
 		for( i=0; i<255; i++ ) {
 			if( i % 4 == 0 )
 				colours[i] = 0;
@@ -470,18 +482,6 @@ function changePalette()
 				colours[i] = 4283825920;
 			else if( i % 4 == 3 )
 				colours[i] = 4294967040;
-		}
-		break;
-	case 8: // CGA 2
-		for( i=0; i<255; i++ ) {
-			if( i % 4 == 0 )
-				colours[i] = 0;
-			else if( i % 4 == 1 )
-				colours[i] = 1442796800;
-			else if( i % 4 == 2 )
-				colours[i] = 4283782400;
-			else if( i % 4 == 3 )
-				colours[i] = 4294923520;
 		}
 		break;
 
