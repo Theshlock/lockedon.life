@@ -372,6 +372,24 @@ function changePalette()
 			colours[i] = (r<<24) + (g<<16) + (b<<8);
 		}
 		break;
+	case 7: // Secondary colours (C,M,Y)
+		for( i=0; i<255; i++ ) {
+			if( i < 85 ) {
+				r = 0 + i*3;
+				g = 255 - i*3;
+				b = 255;
+			} else if( i < 170 ) {
+				r = 255;
+			 	g = 0 + (i-85)*3;
+				b = 255 - (i-85)*3;
+			} else {
+				r = 255 - (i-170)*3;
+				g = 255;
+				b = 0 + (i-170)*3;
+			}
+			colours[i] = (r<<24) + (g<<16) + (b<<8);
+		}
+		break;
 	case 14: // Original DarkBlue-Yellow-Rose-Green
 		for( i=0; i<255; i++ ) {
 			if( i < 32 ) {
@@ -464,24 +482,6 @@ function changePalette()
 				colours[i] = 4283782400;
 			else if( i % 4 == 3 )
 				colours[i] = 4294923520;
-		}
-		break;
-	case 10: // Secondary colours (C,M,Y)
-		for( i=0; i<255; i++ ) {
-			if( i < 85 ) {
-				r = 0 + i*3;
-				g = 255 - i*3;
-				b = 255;
-			} else if( i < 170 ) {
-				r = 255;
-			 	g = 0 + (i-85)*3;
-				b = 255 - (i-85)*3;
-			} else {
-				r = 255 - (i-170)*3;
-				g = 255;
-				b = 0 + (i-170)*3;
-			}
-			colours[i] = (r<<24) + (g<<16) + (b<<8);
 		}
 		break;
 
