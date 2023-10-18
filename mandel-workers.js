@@ -455,38 +455,6 @@ function changePalette()
 			colours[i] = vga[i % 256];
 		}
 		break;
-	/* Packed palette EGA values:
-		  1: 43520		Blue
-		  2: 11141120		Green
-		  3: 11184640		Cyan
-		  4: 2852126720		Red
-		  5: 2852170240		Magenta
-		  6: 2857697280		Brown
-		  7: 2863311360		Lt Gray
-		  8: 1431655680		Dk Gray
-		  9: 1431699200		Lt Blue
-		  10: 1442796800	Lt Green
-		  11: 1442840320	Lt Cyan
-		  12: 4283782400	Lt Red
-		  13: 4283825920	Lt Magenta
-		  14: 4294923520	Lt Yellow
-		  15: 4294967040	White
-	*/
-	case 12: // CGA 1
-		for( i=0; i<255; i++ ) {
-			if( i % 4 == 0 )
-				colours[i] = 0;
-			else if( i % 4 == 1 )
-				colours[i] = 1442840320;
-			else if( i % 4 == 2 )
-				colours[i] = 4283825920;
-			else if( i % 4 == 3 )
-				colours[i] = 4294967040;
-		}
-		break;
-
-
-
 	}
 	startRender( 0,0 );
 }
